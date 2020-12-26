@@ -1,0 +1,33 @@
+:root {
+  --black: #2e2e2e;
+
+  --boxshadowColor: #2e2e2e;
+
+  --raindropsBackground: #9ea1a4;
+  --cloudColor: #efefef;
+
+  --minicardBackground: #60bdff;
+}
+
+body {
+  margin: 0 auto;
+  width: calc(100% / 2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}

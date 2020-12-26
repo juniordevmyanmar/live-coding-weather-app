@@ -1,0 +1,13 @@
+.wrapper {
+  text-align: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #43cea2,
+    #00b5b3,
+    #0099bb,
+    #007ab4,
+    #185a9d
+  );
+  height: 100vh;
+  overflow: scroll;
+}
