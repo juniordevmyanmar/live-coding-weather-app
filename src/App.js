@@ -15,7 +15,10 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/home`}>
             <Home />
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/detail/:lat/:lng`} component = {Detail}>
+          <Route
+            path={`${process.env.PUBLIC_URL}/detail/:lat/:lng`}
+            component={Detail}
+          >
             {/* <Detail /> */}
           </Route>
           <Route path="*">404</Route>

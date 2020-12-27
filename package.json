@@ -18,8 +18,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_WEATHER_KEY=ZDc5ZTQ3M2MyN2UxY2U4NWExNDVjM2E1MWUyM2YyYzU= react-scripts start",
+    "build": "REACT_APP_WEATHER_KEY=ZDc5ZTQ3M2MyN2UxY2U4NWExNDVjM2E1MWUyM2YyYzU= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

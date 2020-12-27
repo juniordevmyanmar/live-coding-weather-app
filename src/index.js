@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { APIKeyContext } from "./context";
+
+const WEATHER_KEY = atob(
+  process.env.REACT_APP_WEATHER_KEY);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <APIKeyContext.Provider value={WEATHER_KEY}>
+      <App />
+    </APIKeyContext.Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
