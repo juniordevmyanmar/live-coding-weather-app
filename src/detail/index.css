@@ -1,0 +1,48 @@
+.capitalize {
+    text-transform: capitalize;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .tracking-wider {
+    letter-spacing: 0.05em;
+  }
+  
+  .text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  
+  .mt-8 {
+    margin-top: 2rem;
+  }
+  
+  .my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
+  
+  .container {
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
+  }
+  

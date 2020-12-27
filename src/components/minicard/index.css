@@ -1,0 +1,25 @@
+.minicard {
+  border-radius: 12px;
+  display: flex;
+  background: var(--minicardBackground);
+  flex-direction: column;
+  height: 10rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: left;
+  width: 8rem;
+}
+.minicard > .date {
+  font-size: small;
+  margin: 0;
+  text-align: center;
+}
+
+.minicard > .cloud-icon {
+  text-align: center;
+}
+.minicard > .temperature {
+  font-size: x-large;
+  margin: 0;
+  text-align: center;
+}
