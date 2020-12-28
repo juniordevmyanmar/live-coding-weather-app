@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { useParams } from "react-router";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faTint } from "@fortawesome/free-solid-svg-icons";
-import { useReducerAPI } from "../api";
+
+import { HZAPIHook } from "../hz";
 import MiniCard from "../components/minicard";
 import Status from "../components/status";
 import Loading from "../components/loading";
@@ -12,7 +13,7 @@ const Detail = () => {
   const { lat, lng } = useParams();
   const WEATHER_KEY = useContext(APIKeyContext);
 
-  const currentWeatherState = useReducerAPI(
+  const currentWeatherState = HZAPIHook(
     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${WEATHER_KEY}`
   );
 

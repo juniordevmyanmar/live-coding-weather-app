@@ -1,6 +1,6 @@
 import React from "react";
 
-const API = async (url, abortSignal) => {
+export const API = async (url, abortSignal) => {
   const response = await fetch(url, { signal: abortSignal });
   return response.json();
 };
@@ -40,6 +40,19 @@ export const useStateAPI = (url) => {
   return value;
 };
 
+export const reducer = (state, action) => {
+  switch (action.type) {
+    case "loading":
+      return { loading: true, data: null, error: null };
+    case "success":
+      return { loading: false, data: action.data, error: null };
+    case "error":
+      return { loading: false, data: null, error: action.error };
+    default:
+      throw new Error();
+  }
+};
+
 /**
  * This method will use useReducer to get predicted state throughout the api request.
  * @param {string} url
@@ -47,18 +60,7 @@ export const useStateAPI = (url) => {
 export const useReducerAPI = (url) => {
   const initialState = { loading: false, data: null, error: null };
   // This is reducer
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "loading":
-        return { loading: true, data: null, error: null };
-      case "success":
-        return { loading: false, data: action.data, error: null };
-      case "error":
-        return { loading: false, data: null, error: action.error };
-      default:
-        throw new Error();
-    }
-  };
+
   // we will use Reducer if we have to handle complex state in our component
   const [state, dispatch] = React.useReducer(reducer, initialState);
   React.useEffect(() => {

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 
 import Home from "./home";
@@ -8,6 +8,10 @@ function App() {
   return (
     <div className="wrapper">
       <Router>
+        <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>|
+        <Link to={`${process.env.PUBLIC_URL}/detail/21.9769/96.0869`}>
+          Nay P Daw
+        </Link>
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`}>
             <Home />
